@@ -74,10 +74,7 @@ class Phergie_Plugin_Wunderground extends Phergie_Plugin_Abstract
      */
     
     public function onCommandWeather($location)
-    {       
-        // strip out spaces
-        //$location = preg_replace('|\s|', '', $location);
-        
+    {
         $urlString = 'http://api.wunderground.com/api/' . 
                         $this->getConfig('wunderground.api_key') .
                         '/conditions/q/' . 
